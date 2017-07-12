@@ -1,2 +1,12 @@
-<h3> Hello <%= current_user.email %></h3>
+<div class="panel panel-default">
+  <div class="panel-heading">Today's Readings - <%= Date.today %></div>
+  <div class="panel-body">
+  	<div class="row">
+  		<% @daily_glucose_levels.each do | gl | %>
+  			<div class="col-md-3 gl-reading"><%= gl.reading %> dl/ml</div>
+  		<% end %>
+  	</div>
+  </div>
+</div>
+
 <%= render 'form' %>

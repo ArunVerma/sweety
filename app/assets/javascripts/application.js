@@ -15,4 +15,5 @@
 //= require bootstrap
 //= require jquery_ujs
 //= require turbolinks
+//= require glucose_levels
 // require_tree .
