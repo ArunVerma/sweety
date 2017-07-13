@@ -2,11 +2,28 @@
   <div class="panel-heading">Today's Readings - <%= Date.today %></div>
   <div class="panel-body">
   	<div class="row">
-  		<% @daily_glucose_levels.each do | gl | %>
-  			<div class="col-md-3 gl-reading"><%= gl.reading %> dl/ml</div>
+  		<% @glucose_levels.each do | gl | %>
+  			<div class="col-md-3 gl-reading"><%= gl.reading %> mg/dl</div>
   		<% end %>
   	</div>
   </div>
 </div>
-
+<p></p>
+<div class="panel panel-default report-panel">
+  <div class="panel-heading">Daily Report</div>
+  <div class="panel-body">
+      <div class="row"> 
+        <div class='col-sm-3'> Select Date : 
+            <div class="form-group">
+                <div class='input-group date' id='datetimepicker1'>
+                    <input type='text' class="form-control" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    	</div>
+  </div>
+</div>
 <%= render 'form' %>

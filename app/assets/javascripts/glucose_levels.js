@@ -18,4 +18,12 @@ $(document).ready(function() {
 		});
 		return false;
 	});
+
+
+	$('#datetimepicker1').datepicker({
+		showTodayButton: true,
+		horizontal: 'left',
+		vertical: 'bottom',
+    format: 'yyyy/mm/dd'
+  });
 })

@@ -13,7 +13,8 @@
 //= require jquery
 //= require tether-min
 //= require bootstrap
+//= require datepicker-min
 //= require jquery_ujs
 //= require turbolinks
 //= require glucose_levels
-// require_tree .
+

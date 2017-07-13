@@ -1,8 +1,6 @@
 class GlucoseLevelsController < ApplicationController
 	def index
-		# get todays glucose level counts for current user  - use a scope
-		# @glucose_levels = current_user.glucose_levels
-		@daily_glucose_levels = current_user.glucose_levels
+		@glucose_levels = current_user.glucose_levels.select(:reading, :created_at).where('date(created_at) = ?', Date.today)
 	end
 
 	def create
